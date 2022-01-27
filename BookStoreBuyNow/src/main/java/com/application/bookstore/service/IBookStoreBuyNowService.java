@@ -7,6 +7,9 @@ import com.application.bookstore.model.OrderDATACart;
 
 import java.util.List;
 
+/**
+ * Service Layer Interface
+ */
 public interface IBookStoreBuyNowService {
     Book buyNow(OrderDATA orderDATA);
     List<Book> buyNowBooksinCart(OrderDATACart orderDATACart);

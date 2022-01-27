@@ -8,13 +8,23 @@ import com.application.bookstoresuser.service.IBookStoreUserService;
 import com.application.bookstoresuser.utility.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+/**
+ * @Service : creating service layer
+ * @Autowired : enabling automatic dependency Injection
+ * @Override : Overriding implemented methods from interface
+ */
 @Service
 public class BookStoreUserService implements IBookStoreUserService {
 
+    /**
+     * Autowiring to Save Data in Repository
+     */
     @Autowired
     BookStoreUserRepository bookStoreUserRepository;
 
+    /**
+     * Autowiring JwtTokenUtil to Creating Token
+     */
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
@@ -51,11 +61,21 @@ public class BookStoreUserService implements IBookStoreUserService {
         }
     }
 
+    /**
+     * Method to Delete User by id
+     * @param id
+     */
     @Override
     public void deletebyID(Long id) {
         bookStoreUserRepository.deleteById(id);
     }
 
+    /**
+     * Method to update User Details
+     * @param id
+     * @param userDTO
+     * @return
+     */
     @Override
     public User updateUser(Long id, UserDTO userDTO) {
         User user = bookStoreUserRepository.getById(id);

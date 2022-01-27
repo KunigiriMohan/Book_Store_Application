@@ -16,15 +16,30 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @Service : creating service layer
+ * @Autowired : enabling automatic dependency Injection
+ * */
 @Service
 public class BookStoreBuNowService implements IBookStoreBuyNowService {
 
+    /**
+     * Autowiring Repository Interface to inject Address Object  to Save in DB
+     */
     @Autowired
     BookStoreBuyNowAddressRepository bookStoreBuyNowAddressRepository;
 
+    /**
+     * Autowiring Repository Interface to inject Book Object  to Save in DB
+     */
     @Autowired
     BookStoreBuyNowRepository bookStoreBuyNowRepository;
 
+    /**
+     * Method to buy Book from Homepage using Id
+     * @param orderDATA
+     * @return
+     */
     @Override
     public Book buyNow(OrderDATA orderDATA) {
         Address address = new Address(orderDATA.getAddressDTO());
@@ -34,6 +49,11 @@ public class BookStoreBuNowService implements IBookStoreBuyNowService {
         return bookStoreBuyNowRepository.save(orderDATA.getBook());
     }
 
+    /**
+     * Method to buy Books in Cart
+     * @param orderDATACart
+     * @return
+     */
     @Override
     public List<Book> buyNowBooksinCart(OrderDATACart orderDATACart) {
         Address address = new Address(orderDATACart.getAddressDTO());

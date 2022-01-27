@@ -1,7 +1,9 @@
 package com.application.bookstore.model;
 
 import lombok.Data;
-
+/**
+ * @Data : To Generate Getters and Setters
+ */
 @Data
 public class Message {
     public static String userAlreadyPresent = "User Number Already Registered";

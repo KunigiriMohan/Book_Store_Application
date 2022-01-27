@@ -5,6 +5,9 @@ import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
 
+/**
+ * Service Layer Interface
+ */
 public interface IBookStoreHomeService {
     Book addBook(Book book);
     List<Book> getAllBooks();

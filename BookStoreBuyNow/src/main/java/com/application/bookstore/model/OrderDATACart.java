@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * @Data : to Generate Getters and Setters
+ */
 @Data
 public class OrderDATACart {
     AddressDTO addressDTO;

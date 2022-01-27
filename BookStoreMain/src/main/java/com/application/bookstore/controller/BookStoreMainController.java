@@ -4,12 +4,15 @@ import com.application.bookstore.dto.*;
 import com.application.bookstore.exception.BookStoreException;
 import com.application.bookstore.model.*;
 import com.application.bookstore.utility.JwtTokenUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
+
+import javax.validation.Valid;
 
 /**
  * @RestController : Defining Class as a RestController
@@ -21,6 +24,7 @@ import org.springframework.web.client.RestTemplate;
  * @Autowired : Dependency Injection
  * @Valid : Checking Requested bean is valid or not
  */
+@Slf4j
 @RestController
 @RequestMapping("/bookstore")
 public class BookStoreMainController {
@@ -34,6 +38,7 @@ public class BookStoreMainController {
     /**
      * creating object of PropertyBean to get URL variables;
      */
+    @Autowired
     private PropertyBean propertyBean;
 
     /**
@@ -42,7 +47,8 @@ public class BookStoreMainController {
      * @return ResponseEntity of Created Object
      */
     @PostMapping("/signup")
-    public ResponseEntity<ResponseDTO> userSignUp(@RequestBody User user) {
+    public ResponseEntity<ResponseDTO> userSignUp(@Valid @RequestBody UserDTO userDTO) {
+        User user = new User(userDTO);
         User signUpUser = new RestTemplate().postForObject(propertyBean.getSignupURL(), user,User.class);
         if (signUpUser.getMobileNumber() == null) {
             throw new BookStoreException(Message.userAlreadyPresent);
@@ -58,7 +64,8 @@ public class BookStoreMainController {
      * @return : ResponseEntity of token
      */
     @GetMapping("/login")
-    public ResponseEntity<ResponseDTO> userLogin(@RequestBody User user) {
+    public ResponseEntity<ResponseDTO> userLogin(@Valid @RequestBody UserDTO userDTO) {
+        User user = new User(userDTO);
         String loginUser = new RestTemplate().postForObject(propertyBean.getLoginURL(), user,String.class);
         if (loginUser == null) {
             throw new BookStoreException(Message.userNotRegistered);
@@ -76,7 +83,7 @@ public class BookStoreMainController {
      * @return ResponseEntity of updated user Details
      */
     @PutMapping("/updateuserbyid/{id}")
-    public ResponseEntity<ResponseDTO> updateUser(@RequestBody UserDTO userDTO,@PathVariable("id") Long id,@RequestHeader String token){
+    public ResponseEntity<ResponseDTO> updateUser(@Valid @RequestBody UserDTO userDTO,@PathVariable("id") Long id,@RequestHeader String token){
         if (jwtTokenUtil.isValidToken(token)){
             try{
                 UpdateUserData updateUserData = new UpdateUserData(id,userDTO);
@@ -86,7 +93,6 @@ public class BookStoreMainController {
             }catch(Exception exception){
                 ResponseDTO responseDTO = new ResponseDTO(Message.userNotRegistered,HttpStatus.BAD_REQUEST);
                 return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
-
             }
         }
         else{
@@ -141,6 +147,7 @@ public class BookStoreMainController {
     public ResponseEntity<ResponseDTO> addBookToCart(@PathVariable("id") Long id,@RequestHeader String token){
         if (jwtTokenUtil.isValidToken(token)) {
             Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
+            log.debug("Book "+book.toString());
             Book bookinCart = new RestTemplate().postForObject(propertyBean.getAddBookToCartURL(),book,Book.class);
             ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedToCart,bookinCart,HttpStatus.OK);
             return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
@@ -203,7 +210,7 @@ public class BookStoreMainController {
      * @return : ResponseEntity of List of products Added for Buying
      */
     @PostMapping("/buyproductsincart")
-    public ResponseEntity<ResponseDTO> buyBooksinCart(@RequestHeader String token, @RequestBody AddressDTO addressDTO){
+    public ResponseEntity<ResponseDTO> buyBooksinCart(@RequestHeader String token,@Valid @RequestBody AddressDTO addressDTO){
         if (jwtTokenUtil.isValidToken(token)){
             Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class);
             if (booksInCart.length==0){
@@ -231,7 +238,7 @@ public class BookStoreMainController {
      * @return : ResponseEntity of Book Buyed
      */
     @PostMapping("/buybookfromhomepage/{id}")
-    public ResponseEntity<ResponseDTO> buyProduct(@PathVariable("id") Long id,@RequestBody AddressDTO addressDTO){
+    public ResponseEntity<ResponseDTO> buyProduct(@PathVariable("id") Long id,@Valid @RequestBody AddressDTO addressDTO){
         Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
         OrderDATA orderDATA = new OrderDATA();
         orderDATA.setBook(book);

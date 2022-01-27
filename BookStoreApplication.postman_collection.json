@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "3bef36f6-c7cb-474e-8842-4bff33ccb859",
+		"name": "BookStoreApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserRegistration",
+			"item": [
+				{
+					"name": "SignUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":\"8555058332\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/registeruser",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"registeruser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updating User Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5,\r\n    \"userDTO\":{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\",\r\n    \"email\":\"kmohanraju5@gamil.com\"\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/updateuser/",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"updateuser",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MainClient",
+			"item": [
+				{
+					"name": "Signup URL in Client Server",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":\"8179800190\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Main Class",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "without Login Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/bookstore/getallbooks",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"getallbooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Products in Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/bookstore/addbook/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"addbook",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting Book From Cart using id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/bookstore/removebookfromcart/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"removebookfromcart",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books in Cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/bookstore/getallbooksincart",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"getallbooksincart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleting User By id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/bookstore/deletebyid/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"deletebyid",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":\"8179800190\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/updateuserbyid/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"updateuserbyid",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy BookFrom Home",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/buybookfromhomepage/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"buybookfromhomepage",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Books in Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/buyproductsincart",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"buyproductsincart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home Page",
+			"item": [
+				{
+					"name": "localhost:9002/addbook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9002/addbook",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"addbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookByid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/getbyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"getbyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getting All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9002/getallbooks",
+							"host": [
+								"localhost"
+							],
+							"port": "9002",
+							"path": [
+								"getallbooks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart LocalURls",
+			"item": [
+				{
+					"name": "localhost:9003/addbook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9003/addbook",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"addbook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Books inCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9003/booksincart",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"booksincart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete book in cart by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9003/removebookfromcart/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"removebookfromcart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Buy Now URls",
+			"item": [
+				{
+					"name": "Buy Now URL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"bookDTO\":{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9004/buynow",
+							"host": [
+								"localhost"
+							],
+							"port": "9004",
+							"path": [
+								"buynow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Products Present in Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"book\":[{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    },\r\n    {\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9004/buyallproductsincart",
+							"host": [
+								"localhost"
+							],
+							"port": "9004",
+							"path": [
+								"buyallproductsincart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Books in Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/bookstore/buyproductsincart",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bookstore",
+								"buyproductsincart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

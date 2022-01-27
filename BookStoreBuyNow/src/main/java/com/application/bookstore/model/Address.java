@@ -6,6 +6,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
+/**
+ * @Data : Using lombok to autogenerate toString() , Getters and Setters.
+ * @AllArgsContructor: To Create Constructor
+ * @NoArgsConstructor : To Create No Constructor
+ * @Table : Creating Table and Declaring Name
+ * @Entity : To Create Entity of Class
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

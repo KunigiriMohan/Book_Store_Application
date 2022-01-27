@@ -14,11 +14,20 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @ControllerAdvice : Creating Controller Advice to Handle Exceptions
+ * @ExceptionHandler : Creating Exception Handler method to handle Exceptions Thrown
+ */
 @ControllerAdvice
 public class BookStoreUserEXceptionHandler {
     private static final String message = " Exception while processing REST Request";
 
 
+    /**
+     * Exception Handler for MethodArgumentNotValidException
+     * @param methodArgumentNotValidException
+     * @return : ResponseEntity of Exception
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseDTO> handlerMethodArgumentNotValidException(MethodArgumentNotValidException methodArgumentNotValidException) {
         List<ObjectError> errorList = methodArgumentNotValidException.getBindingResult().getAllErrors();
@@ -28,20 +37,25 @@ public class BookStoreUserEXceptionHandler {
     }
 
 
+    /**
+     * Exception Handler BookStoreEXception
+     * @param bookStoreException
+     * @return : ResponseEntity of Exception
+     */
     @ExceptionHandler(BookStoreException.class)
     public ResponseEntity<ResponseDTO> handlerBookStoreException(BookStoreException bookStoreException){
         ResponseDTO responseDTO = new ResponseDTO(message,bookStoreException.getMessage(),HttpStatus.BAD_REQUEST );
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
     }
 
+    /**
+     * Exception Handler MissingRequestHeaderException
+     * @param exception
+     * @return : REsponseEntity of Exception
+     */
     @ExceptionHandler(MissingRequestHeaderException.class)
     public ResponseEntity<ResponseDTO> missingRequestHeaderException(MissingRequestHeaderException exception){
         ResponseDTO responseDTO = new ResponseDTO(message ,"Enter your Token",HttpStatus.BAD_REQUEST);
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.BAD_REQUEST);
     }
-    /*@ExceptionHandler(EmptyResultDataAccessException.class)
-    public ResponseEntity<ResponseDTO> handlerEmptyResultDataAccessException(EmptyResultDataAccessException emptyResultDataAccessException) {
-        ResponseDTO responseDTO = new ResponseDTO(message, emptyResultDataAccessException.getMessage(), HttpStatus.BAD_REQUEST);
-        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
-    }*/
 }

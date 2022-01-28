@@ -3,6 +3,7 @@ package com.application.bookstore.controller;
 import com.application.bookstore.model.Book;
 import com.application.bookstore.model.OrderDATA;
 import com.application.bookstore.model.OrderDATACart;
+import com.application.bookstore.repository.BookStoreBuyNowRepository;
 import com.application.bookstore.service.IBookStoreBuyNowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,9 @@ public class BookStoreBuyNowController {
     @Autowired
     IBookStoreBuyNowService iBookStoreBuyNowService;
 
+    @Autowired
+    BookStoreBuyNowRepository bookStoreBuyNowRepository;
+
     /**
      * API for buying Book from Home page using id
      * @param orderDATA
@@ -43,4 +47,7 @@ public class BookStoreBuyNowController {
     public List<Book> buyNowBooksinCart(@RequestBody OrderDATACart orderDATACart){
         return iBookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
     }
+
+    @GetMapping("/carttotal")
+    public Long totalCartValue(){return bookStoreBuyNowRepository.cartValue();}
 }

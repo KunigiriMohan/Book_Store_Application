@@ -2,6 +2,7 @@ package com.application.bookstore.controller;
 
 import com.application.bookstore.dto.BookDTO;
 import com.application.bookstore.model.Book;
+import com.application.bookstore.repository.BookStoreCartRepository;
 import com.application.bookstore.serviceimplementation.BookStoreCartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,9 @@ public class BookStoreCartController {
      */
     @Autowired
     BookStoreCartService bookStoreCartService;
+
+    @Autowired
+    BookStoreCartRepository bookStoreCartRepository;
 
     /**
      * API for save Book in DB
@@ -50,4 +54,7 @@ public class BookStoreCartController {
     public void removeBookfromCart(@PathVariable("id") Long id){
         bookStoreCartService.removeBookfromCart(id);
     }
+
+    @GetMapping("carttotal")
+    public Long totalCartValue(){return bookStoreCartRepository.cartValue();}
 }

@@ -43,7 +43,7 @@ public class BookStoreMainController {
 
     /**
      * API for Registering User in BookStore Application
-     * @param user
+     * @param userDTO
      * @return ResponseEntity of Created Object
      */
     @PostMapping("/signup")
@@ -147,7 +147,6 @@ public class BookStoreMainController {
     public ResponseEntity<ResponseDTO> addBookToCart(@PathVariable("id") Long id,@RequestHeader String token){
         if (jwtTokenUtil.isValidToken(token)) {
             Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
-            log.debug("Book "+book.toString());
             Book bookinCart = new RestTemplate().postForObject(propertyBean.getAddBookToCartURL(),book,Book.class);
             ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedToCart,bookinCart,HttpStatus.OK);
             return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
@@ -186,16 +185,17 @@ public class BookStoreMainController {
      * @return : ResponseEntity all books in Cart
      */
     @GetMapping("/getallbooksincart")
-    public ResponseEntity<ResponseDTO> getAllBooksInCart(@RequestHeader String token){
+    public ResponseEntity<BuyResponseDTO> getAllBooksInCart(@RequestHeader String token){
         if (jwtTokenUtil.isValidToken(token)){
                 Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class);
+                Long value = new RestTemplate().getForObject(propertyBean.getCartValueURL(),Long.class);
                 if (booksInCart.length==0){
-                    ResponseDTO responseDTO = new ResponseDTO(Message.noBookFoundinCart,HttpStatus.OK);
-                    return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
+                    BuyResponseDTO responseDTO = new BuyResponseDTO(Message.noBookFoundinCart,booksInCart,null,HttpStatus.OK);
+                    return new ResponseEntity<BuyResponseDTO>(responseDTO,HttpStatus.BAD_REQUEST);
                 }
                 else{
-                    ResponseDTO responseDTO = new ResponseDTO(Message.booksInCart,booksInCart,HttpStatus.OK);
-                    return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+                    BuyResponseDTO responseDTO = new BuyResponseDTO(Message.booksInCart,booksInCart,value,HttpStatus.OK);
+                    return new ResponseEntity<BuyResponseDTO>(responseDTO, HttpStatus.OK);
                 }
         }
         else {
@@ -210,20 +210,21 @@ public class BookStoreMainController {
      * @return : ResponseEntity of List of products Added for Buying
      */
     @PostMapping("/buyproductsincart")
-    public ResponseEntity<ResponseDTO> buyBooksinCart(@RequestHeader String token,@Valid @RequestBody AddressDTO addressDTO){
+    public ResponseEntity<BuyResponseDTO> buyBooksinCart(@RequestHeader String token,@Valid @RequestBody AddressDTO addressDTO){
         if (jwtTokenUtil.isValidToken(token)){
             Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class);
+            Long value = new RestTemplate().getForObject(propertyBean.getCartValueURL(),Long.class);
             if (booksInCart.length==0){
-                ResponseDTO responseDTO = new ResponseDTO(Message.noBookFoundinCart,HttpStatus.OK);
-                return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
+                BuyResponseDTO responseDTO = new BuyResponseDTO(Message.noBookFoundinCart,booksInCart,value,HttpStatus.OK);
+                return new ResponseEntity<BuyResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
             }
             else {
                 OrderDATACart orderDATACart = new OrderDATACart();
                 orderDATACart.setAddressDTO(addressDTO);
                 orderDATACart.setBook(booksInCart);
-                String result = new RestTemplate().postForObject(propertyBean.getBuyNowBookFromCart(),orderDATACart,String.class);
-                ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedForBuying,result,HttpStatus.OK);
-                return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+                Book[] result = new RestTemplate().postForObject(propertyBean.getBuyNowBookFromCart(),orderDATACart,Book[].class);
+                BuyResponseDTO responseDTO = new BuyResponseDTO(Message.bookAddedForBuying,result,value,HttpStatus.OK);
+                return new ResponseEntity<BuyResponseDTO>(responseDTO, HttpStatus.OK);
             }
         }
         else{
@@ -238,13 +239,14 @@ public class BookStoreMainController {
      * @return : ResponseEntity of Book Buyed
      */
     @PostMapping("/buybookfromhomepage/{id}")
-    public ResponseEntity<ResponseDTO> buyProduct(@PathVariable("id") Long id,@Valid @RequestBody AddressDTO addressDTO){
+    public ResponseEntity<BuyResponseDTO> buyProduct(@PathVariable("id") Long id,@Valid @RequestBody AddressDTO addressDTO){
         Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
         OrderDATA orderDATA = new OrderDATA();
         orderDATA.setBook(book);
         orderDATA.setAddressDTO(addressDTO);
-        String bookBuyed = new RestTemplate().postForObject(propertyBean.getBuyNowBookURL(),orderDATA,String.class);
-        ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedForBuying,bookBuyed,HttpStatus.OK);
-        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+        Book bookBuyed = new RestTemplate().postForObject(propertyBean.getBuyNowBookURL(),orderDATA,Book.class);
+        Long value = new RestTemplate().getForObject(propertyBean.getBuyNowValueURL(),Long.class);
+        BuyResponseDTO responseDTO = new BuyResponseDTO(Message.bookAddedForBuying,bookBuyed,value,HttpStatus.OK);
+        return new ResponseEntity<BuyResponseDTO>(responseDTO, HttpStatus.OK);
     }
 }

@@ -1,6 +1,8 @@
 package com.application.bookstore.dto;
 
 import com.application.bookstore.model.Book;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 
@@ -16,6 +18,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseDTO {
     public String message;
     public Object data;

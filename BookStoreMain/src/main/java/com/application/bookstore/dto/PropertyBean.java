@@ -30,5 +30,7 @@ public class PropertyBean {
     private String buyNowBookURL;
     private String buyNowBookFromCart;
     private String updateUserDetailsByIDURL;
+    private String cartValueURL;
+    private String buyNowValueURL;
 
 }

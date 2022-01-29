@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "3bef36f6-c7cb-474e-8842-4bff33ccb859",
-		"name": "BookStoreApplication",
+		"name": "BookStoreApplication Original",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -85,6 +85,25 @@
 							"path": [
 								"updateuser",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getging User buy by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/getuserbyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"getuserbyid",
+								"2"
 							]
 						}
 					},
@@ -180,12 +199,12 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5NDkxNjMxMzAyIiwiaWF0IjoxNjQzMzQwMjM3fQ.cZ-VtKepxf-HltEx4TtbzR_OOEGkvTzk1E-W3kBLYVE",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "localhost:8081/bookstore/addbook/2",
+							"raw": "localhost:8081/bookstore/addbook/2?quantity=5&userid=2",
 							"host": [
 								"localhost"
 							],
@@ -194,6 +213,16 @@
 								"bookstore",
 								"addbook",
 								"2"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "5"
+								},
+								{
+									"key": "userid",
+									"value": "2"
+								}
 							]
 						}
 					},
@@ -211,7 +240,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8081/bookstore/removebookfromcart/5",
+							"raw": "localhost:8081/bookstore/removebookfromcart/1",
 							"host": [
 								"localhost"
 							],
@@ -219,7 +248,7 @@
 							"path": [
 								"bookstore",
 								"removebookfromcart",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -237,14 +266,15 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8081/bookstore/getallbooksincart",
+							"raw": "localhost:8081/bookstore/getallbooksincart/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"bookstore",
-								"getallbooksincart"
+								"getallbooksincart",
+								"2"
 							]
 						}
 					},
@@ -262,7 +292,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:8081/bookstore/deletebyid/3",
+							"raw": "localhost:8081/bookstore/deletebyid/1",
 							"host": [
 								"localhost"
 							],
@@ -270,7 +300,7 @@
 							"path": [
 								"bookstore",
 								"deletebyid",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -280,10 +310,16 @@
 					"name": "Update User Details",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5NDkxNjMxMzAyIiwiaWF0IjoxNjQzMzQwMjM3fQ.cZ-VtKepxf-HltEx4TtbzR_OOEGkvTzk1E-W3kBLYVE",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"mobileNumber\":\"8179800190\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"mobileNumber\":\"8179800190\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@outlook.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -291,7 +327,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8081/bookstore/updateuserbyid/6",
+							"raw": "localhost:8081/bookstore/updateuserbyid/1",
 							"host": [
 								"localhost"
 							],
@@ -299,7 +335,7 @@
 							"path": [
 								"bookstore",
 								"updateuserbyid",
-								"6"
+								"1"
 							]
 						}
 					},
@@ -361,14 +397,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8081/bookstore/buyproductsincart",
+							"raw": "localhost:8081/bookstore/buyproductsincart/2",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"bookstore",
-								"buyproductsincart"
+								"buyproductsincart",
+								"2"
 							]
 						}
 					},
@@ -463,13 +500,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:9003/addbook",
+							"raw": "localhost:9003/addbook/1",
 							"host": [
 								"localhost"
 							],
 							"port": "9003",
 							"path": [
-								"addbook"
+								"addbook",
+								"1"
 							]
 						}
 					},
@@ -481,13 +519,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:9003/booksincart",
+							"raw": "localhost:9003/booksincart/2",
 							"host": [
 								"localhost"
 							],
 							"port": "9003",
 							"path": [
-								"booksincart"
+								"booksincart",
+								"2"
 							]
 						}
 					},
@@ -507,6 +546,51 @@
 							"path": [
 								"removebookfromcart",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carttotalvalue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9003/carttotal",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"carttotal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserSignUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":\"8555058332\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9003/registeruser",
+							"host": [
+								"localhost"
+							],
+							"port": "9003",
+							"path": [
+								"registeruser"
 							]
 						}
 					},
@@ -600,6 +684,24 @@
 							"path": [
 								"bookstore",
 								"buyproductsincart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Books Value",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9004/carttotal",
+							"host": [
+								"localhost"
+							],
+							"port": "9004",
+							"path": [
+								"carttotal"
 							]
 						}
 					},

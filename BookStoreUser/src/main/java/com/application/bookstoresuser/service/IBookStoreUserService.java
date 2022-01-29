@@ -11,4 +11,5 @@ public interface IBookStoreUserService {
     public String generateToken(User user);
     public void deletebyID(Long id);
     public User updateUser(Long id, UserDTO userDTO);
+    User getUserByID(Long id);
 }

@@ -13,6 +13,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
+import java.util.Arrays;
 
 /**
  * @RestController : Defining Class as a RestController
@@ -50,6 +51,7 @@ public class BookStoreMainController {
     public ResponseEntity<ResponseDTO> userSignUp(@Valid @RequestBody UserDTO userDTO) {
         User user = new User(userDTO);
         User signUpUser = new RestTemplate().postForObject(propertyBean.getSignupURL(), user,User.class);
+        User signUpUserinCart = new RestTemplate().postForObject(propertyBean.getCreateUserinCart(), user,User.class);
         if (signUpUser.getMobileNumber() == null) {
             throw new BookStoreException(Message.userAlreadyPresent);
         } else {
@@ -88,6 +90,7 @@ public class BookStoreMainController {
             try{
                 UpdateUserData updateUserData = new UpdateUserData(id,userDTO);
                 User user = new RestTemplate().postForObject(propertyBean.getUpdateUserDetailsByIDURL(),updateUserData,User.class);
+                User userinCart = new RestTemplate().postForObject(propertyBean.getUpdateUserByIdCartURl(),updateUserData,User.class);
                 ResponseDTO responseDTO = new ResponseDTO(Message.userUpdatedSucessfully,user,HttpStatus.OK);
                 return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
             }catch(Exception exception){
@@ -112,6 +115,7 @@ public class BookStoreMainController {
         if (jwtTokenUtil.isValidToken(token)){
             try{
                 new RestTemplate().delete(propertyBean.getDeleteUserByIdURL(),id);
+                new RestTemplate().delete(propertyBean.getDeleteUserByIdCartURL(),id);
                 ResponseDTO responseDTO = new ResponseDTO(Message.userDeletedSucessfully,HttpStatus.OK);
                 return  new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
             }
@@ -144,10 +148,17 @@ public class BookStoreMainController {
      * @return : ResponseEntity of Added Book
      */
     @PostMapping("/addbook/{id}")
-    public ResponseEntity<ResponseDTO> addBookToCart(@PathVariable("id") Long id,@RequestHeader String token){
+    public ResponseEntity<ResponseDTO> addBookToCart(@PathVariable("id") Long id,@RequestHeader String token,@RequestParam Long quantity,@RequestParam Long userid){
+        Book bookinCart = null;
         if (jwtTokenUtil.isValidToken(token)) {
-            Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
-            Book bookinCart = new RestTemplate().postForObject(propertyBean.getAddBookToCartURL(),book,Book.class);
+            for (int times =1;times<=quantity;times++){
+                Book book = new RestTemplate().getForObject(propertyBean.getGetallbookByIDURL(),Book.class,id);
+                User user = new RestTemplate().getForObject(propertyBean.getGettuserByid(),User.class,userid);
+                book.setUser(user);
+                AddBookToCart addBookToCart = new AddBookToCart(book,userid);
+                bookinCart = new RestTemplate().postForObject(propertyBean.getAddBookToCartURL(),addBookToCart,Book.class);
+                //ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedToCart,bookinCart,HttpStatus.OK);
+            }
             ResponseDTO responseDTO = new ResponseDTO(Message.bookAddedToCart,bookinCart,HttpStatus.OK);
             return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
         }
@@ -184,10 +195,10 @@ public class BookStoreMainController {
      * @param token
      * @return : ResponseEntity all books in Cart
      */
-    @GetMapping("/getallbooksincart")
-    public ResponseEntity<BuyResponseDTO> getAllBooksInCart(@RequestHeader String token){
+    @GetMapping("/getallbooksincart/{id}")
+    public ResponseEntity<BuyResponseDTO> getAllBooksInCart(@RequestHeader String token,@PathVariable("id") Long id){
         if (jwtTokenUtil.isValidToken(token)){
-                Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class);
+                Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class,id);
                 Long value = new RestTemplate().getForObject(propertyBean.getCartValueURL(),Long.class);
                 if (booksInCart.length==0){
                     BuyResponseDTO responseDTO = new BuyResponseDTO(Message.noBookFoundinCart,booksInCart,null,HttpStatus.OK);
@@ -209,10 +220,10 @@ public class BookStoreMainController {
      * @param addressDTO
      * @return : ResponseEntity of List of products Added for Buying
      */
-    @PostMapping("/buyproductsincart")
-    public ResponseEntity<BuyResponseDTO> buyBooksinCart(@RequestHeader String token,@Valid @RequestBody AddressDTO addressDTO){
+    @PostMapping("/buyproductsincart/{id}")
+    public ResponseEntity<BuyResponseDTO> buyBooksinCart(@RequestHeader String token,@Valid @RequestBody AddressDTO addressDTO,@PathVariable("id") Long id){
         if (jwtTokenUtil.isValidToken(token)){
-            Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class);
+            Book[] booksInCart= new RestTemplate().getForObject(propertyBean.getGetAllBookinCart(),Book[].class,id);
             Long value = new RestTemplate().getForObject(propertyBean.getCartValueURL(),Long.class);
             if (booksInCart.length==0){
                 BuyResponseDTO responseDTO = new BuyResponseDTO(Message.noBookFoundinCart,booksInCart,value,HttpStatus.OK);
@@ -223,6 +234,7 @@ public class BookStoreMainController {
                 orderDATACart.setAddressDTO(addressDTO);
                 orderDATACart.setBook(booksInCart);
                 Book[] result = new RestTemplate().postForObject(propertyBean.getBuyNowBookFromCart(),orderDATACart,Book[].class);
+                new RestTemplate().delete(propertyBean.getDeleteBookByUserid(),id);
                 BuyResponseDTO responseDTO = new BuyResponseDTO(Message.bookAddedForBuying,result,value,HttpStatus.OK);
                 return new ResponseEntity<BuyResponseDTO>(responseDTO, HttpStatus.OK);
             }

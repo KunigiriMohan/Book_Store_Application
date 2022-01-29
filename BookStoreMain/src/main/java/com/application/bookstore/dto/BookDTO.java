@@ -1,5 +1,6 @@
 package com.application.bookstore.dto;
 
+import com.application.bookstore.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,5 @@ public class BookDTO {
     private Long bookPrice;
     private String bookAuthor;
     private String publishedYear;
+    private User user;
 }

@@ -27,6 +27,10 @@ public class Book {
     private String bookAuthor;
     private String publishedYear;
 
+    @ManyToOne
+    @JoinColumn(name = "fk_userID",referencedColumnName = "iD")
+    private User user;
+
     public Book(BookDTO bookDTO){
         this.updateBookDetails(bookDTO);
     }

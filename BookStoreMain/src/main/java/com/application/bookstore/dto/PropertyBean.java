@@ -32,5 +32,11 @@ public class PropertyBean {
     private String updateUserDetailsByIDURL;
     private String cartValueURL;
     private String buyNowValueURL;
+    private String createUserinCart;
+    private String deleteUserByIdCartURL;
+    private String updateUserByIdCartURl;
+    private String gettuserByid;
+    private String deleteBookByUserid;
+
 
 }

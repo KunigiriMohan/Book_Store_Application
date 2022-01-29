@@ -1,6 +1,7 @@
 package com.example.bookstorehome.model;
 
 import com.example.bookstorehome.dto.BookDTO;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import javax.persistence.*;
 @Table(name = "book_list")
 @Data
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

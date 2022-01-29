@@ -82,4 +82,9 @@ public class BookStoreUserService implements IBookStoreUserService {
         user.updateUser(userDTO);
         return bookStoreUserRepository.save(user);
     }
+
+    @Override
+    public User getUserByID(Long id) {
+        return bookStoreUserRepository.findById(id).get();
+    }
 }

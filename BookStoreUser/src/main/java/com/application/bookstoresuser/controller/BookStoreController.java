@@ -64,4 +64,9 @@ public class BookStoreController {
     public User updateUser(@RequestBody UpdateUserData updateUserData){
         return iBookStoreUserService.updateUser(updateUserData.getId(),updateUserData.getUserDTO());
     }
+
+    @GetMapping("/getuserbyid/{id}")
+    public User getUserById(@PathVariable("id") Long id){
+        return iBookStoreUserService.getUserByID(id);
+    }
 }

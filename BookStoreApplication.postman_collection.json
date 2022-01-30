@@ -1,121 +1,16 @@
 {
 	"info": {
-		"_postman_id": "3bef36f6-c7cb-474e-8842-4bff33ccb859",
-		"name": "BookStoreApplication Original",
+		"_postman_id": "265ca561-909d-4cd8-9b34-107f8a2c4b5b",
+		"name": "Book Store Application",
+		"description": "Book Store Application to buy books of different topics.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "UserRegistration",
+			"name": "API's to perform operations in BookStore Application by the user.",
 			"item": [
 				{
-					"name": "SignUP",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"mobileNumber\":\"8555058332\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9001/registeruser",
-							"host": [
-								"localhost"
-							],
-							"port": "9001",
-							"path": [
-								"registeruser"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9001/login",
-							"host": [
-								"localhost"
-							],
-							"port": "9001",
-							"path": [
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Updating User Details",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\":5,\r\n    \"userDTO\":{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\",\r\n    \"email\":\"kmohanraju5@gamil.com\"\r\n}\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9001/updateuser/",
-							"host": [
-								"localhost"
-							],
-							"port": "9001",
-							"path": [
-								"updateuser",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Getging User buy by id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9001/getuserbyid/2",
-							"host": [
-								"localhost"
-							],
-							"port": "9001",
-							"path": [
-								"getuserbyid",
-								"2"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "MainClient",
-			"item": [
-				{
-					"name": "Signup URL in Client Server",
+					"name": "API to Register User in Book Store Application.",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -138,12 +33,13 @@
 								"bookstore",
 								"signup"
 							]
-						}
+						},
+						"description": "API to register user in BookStore Application, If the user is already registered it will throw Exception showing message \"User already registered\"."
 					},
 					"response": []
 				},
 				{
-					"name": "Login Main Class",
+					"name": "API to Login user in Book Store Application using  user Credentials.",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -169,12 +65,13 @@
 								"bookstore",
 								"login"
 							]
-						}
+						},
+						"description": "API to Login User into the Application using Login Credentials. If the User is not registered it will throw Exception Showing message showing \"User Details are not valid\" or \"User not Registered\"."
 					},
 					"response": []
 				},
 				{
-					"name": "without Login Page",
+					"name": "API to open Home Page of Book Store Application.",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -188,12 +85,13 @@
 								"bookstore",
 								"getallbooks"
 							]
-						}
+						},
+						"description": "API to go to Home Page of BookStore Application without Login to the Application."
 					},
 					"response": []
 				},
 				{
-					"name": "Add Products in Cart",
+					"name": "API to add Book to Cart of the user.",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -224,12 +122,13 @@
 									"value": "2"
 								}
 							]
-						}
+						},
+						"description": "API to add Products to the cart of the user using user Id, Book Id and quantity of the Books. if the user is tried to add Book to card without login it will throw Exception \"Login to perform this operation\"."
 					},
 					"response": []
 				},
 				{
-					"name": "Deleting Book From Cart using id",
+					"name": "API to delete book from the cart using book id.",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -250,12 +149,13 @@
 								"removebookfromcart",
 								"1"
 							]
-						}
+						},
+						"description": "API to delete Book from the cart using Book Id in the cart."
 					},
 					"response": []
 				},
 				{
-					"name": "Get All Books in Cart",
+					"name": "API to show all books present in the cart of the user.",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -276,12 +176,13 @@
 								"getallbooksincart",
 								"2"
 							]
-						}
+						},
+						"description": "API to get all books present in the cart of the user using user Id. If no Books are present it will throw Exception with message \"No Books present in cart.\", if user not Login to application it will throw Exception showing message \"Login to perform this operation\""
 					},
 					"response": []
 				},
 				{
-					"name": "Deleting User By id",
+					"name": "API to delete user by user id from Book Store Application.",
 					"request": {
 						"method": "DELETE",
 						"header": [
@@ -302,12 +203,13 @@
 								"deletebyid",
 								"1"
 							]
-						}
+						},
+						"description": "API to delete user by user Id, if the user is not present it will throw Exception with message \"User not Registered\", if the user is not Login it will throw Exception with message \"Login to perform this operation.\""
 					},
 					"response": []
 				},
 				{
-					"name": "Update User Details",
+					"name": "API to update user details using user id.",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -337,12 +239,13 @@
 								"updateuserbyid",
 								"1"
 							]
-						}
+						},
+						"description": "API to update user details using user id, if the user is not present it will throw Exception with message \"User not Registered\", if the user is not Login it will throw Exception with message \"Login to perform this operation.\""
 					},
 					"response": []
 				},
 				{
-					"name": "Buy BookFrom Home",
+					"name": "API to buy book directly from homepage using book id given in Home Page.",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -372,12 +275,13 @@
 								"buybookfromhomepage",
 								"1"
 							]
-						}
+						},
+						"description": "Method to buy book directly from homepage without login using book id."
 					},
 					"response": []
 				},
 				{
-					"name": "Buy Books in Cart",
+					"name": "API to buy books present in the cart.",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -407,307 +311,411 @@
 								"buyproductsincart",
 								"2"
 							]
-						}
+						},
+						"description": "API to buy books present in the cart, if the cart is empty it will throw Exception with message \"Cart is Empty.\""
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "API's to Perform operations by the Client."
 		},
 		{
-			"name": "Home Page",
+			"name": "Micro Services API's",
 			"item": [
 				{
-					"name": "localhost:9002/addbook",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+					"name": "API's to Perform user operations.",
+					"item": [
+						{
+							"name": "API to register user in Book Store Application.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobileNumber\":\"8555058332\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9001/registeruser",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"registeruser"
+									]
+								},
+								"description": "API to register user in the Book Store Application using Book Store Application."
+							},
+							"response": []
 						},
-						"url": {
-							"raw": "localhost:9002/addbook",
-							"host": [
-								"localhost"
-							],
-							"port": "9002",
-							"path": [
-								"addbook"
-							]
+						{
+							"name": "API to Login user.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9001/login",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"login"
+									]
+								},
+								"description": "API to Login the user in Book Store Application to generate token using user login credentials."
+							},
+							"response": []
+						},
+						{
+							"name": "API to Update user Details.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":5,\r\n    \"userDTO\":{\r\n    \"mobileNumber\": \"8179800190\",\r\n    \"password\": \"password\",\r\n    \"email\":\"kmohanraju5@gamil.com\"\r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9001/updateuser/",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"updateuser",
+										""
+									]
+								},
+								"description": "API to update user details in Book Store Application Database using token."
+							},
+							"response": []
+						},
+						{
+							"name": "API to get user details by using user id.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9001/getuserbyid/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"getuserbyid",
+										"2"
+									]
+								},
+								"description": "API to get user details by user id, if user is not present it will throw Exception by message \"User not Registered.\""
+							},
+							"response": []
 						}
-					},
-					"response": []
+					]
 				},
 				{
-					"name": "GetBookByid",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9002/getbyid/1",
-							"host": [
-								"localhost"
-							],
-							"port": "9002",
-							"path": [
-								"getbyid",
-								"1"
-							]
+					"name": "API's to perform operation on Home page of Application.",
+					"item": [
+						{
+							"name": "API to add Book to Home page.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9002/addbook",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"addbook"
+									]
+								},
+								"description": "API to Book to Home Page by passing Book object as Parameter."
+							},
+							"response": []
+						},
+						{
+							"name": "API to get Book by Book id.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9002/getbyid/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"getbyid",
+										"1"
+									]
+								},
+								"description": "API to get Book from home page using book id."
+							},
+							"response": []
+						},
+						{
+							"name": "API to get all Books present on Home Page.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9002/getallbooks",
+									"host": [
+										"localhost"
+									],
+									"port": "9002",
+									"path": [
+										"getallbooks"
+									]
+								},
+								"description": "API to get all books present in Home page"
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"description": "Consists of API's to perform user operations on Home Page."
 				},
 				{
-					"name": "Getting All Books",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9002/getallbooks",
-							"host": [
-								"localhost"
-							],
-							"port": "9002",
-							"path": [
-								"getallbooks"
-							]
+					"name": "API's to perform Cart operations.",
+					"item": [
+						{
+							"name": "API to add Book to Cart",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9003/addbook/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"addbook",
+										"1"
+									]
+								},
+								"description": "API to add book to cart using book id shown on Home Page."
+							},
+							"response": []
+						},
+						{
+							"name": "API to get all Books present in cart",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9003/booksincart/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"booksincart",
+										"2"
+									]
+								},
+								"description": "API to get all books present in the user cart by passing user id as a path variable. If the user is not found it will throw Exception showing message \"User not Registered.\""
+							},
+							"response": []
+						},
+						{
+							"name": "API to delete Book present cart",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9003/removebookfromcart/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"removebookfromcart",
+										"1"
+									]
+								},
+								"description": "API to delete book from cart using book id."
+							},
+							"response": []
+						},
+						{
+							"name": "API to get total value of Books present in cart.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9003/carttotal",
+									"host": [
+										"localhost"
+									],
+									"port": "9003",
+									"path": [
+										"carttotal"
+									]
+								},
+								"description": "API to get total value of Books present in the cart in rupees."
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"description": "Consists of API's to perform cart operations by user."
+				},
+				{
+					"name": "API's to Buy Books from Book Store Application.",
+					"item": [
+						{
+							"name": "API to buy Book directly from Home Page.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"bookDTO\":{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9004/buynow",
+									"host": [
+										"localhost"
+									],
+									"port": "9004",
+									"path": [
+										"buynow"
+									]
+								},
+								"description": "API to buy book directly from Home Page using Book id shown on Home Page."
+							},
+							"response": []
+						},
+						{
+							"name": "API to buy Books Present in the Cart.",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"book\":[{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    },\r\n    {\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9004/buyallproductsincart",
+									"host": [
+										"localhost"
+									],
+									"port": "9004",
+									"path": [
+										"buyallproductsincart"
+									]
+								},
+								"description": "API to buy all the Books present in the Cart of a user."
+							},
+							"response": []
+						},
+						{
+							"name": "API to buy Books Present in the Cart.",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/bookstore/buyproductsincart",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"bookstore",
+										"buyproductsincart"
+									]
+								},
+								"description": "API to buy all the Books present in the Cart of a user."
+							},
+							"response": []
+						},
+						{
+							"name": "API to show total cart value during buy.",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9004/carttotal",
+									"host": [
+										"localhost"
+									],
+									"port": "9004",
+									"path": [
+										"carttotal"
+									]
+								},
+								"description": "API to show total cart value during buy time."
+							},
+							"response": []
+						}
+					]
 				}
-			]
-		},
-		{
-			"name": "Cart LocalURls",
-			"item": [
-				{
-					"name": "localhost:9003/addbook",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9003/addbook/1",
-							"host": [
-								"localhost"
-							],
-							"port": "9003",
-							"path": [
-								"addbook",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "All Books inCart",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9003/booksincart/2",
-							"host": [
-								"localhost"
-							],
-							"port": "9003",
-							"path": [
-								"booksincart",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete book in cart by id",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "localhost:9003/removebookfromcart/1",
-							"host": [
-								"localhost"
-							],
-							"port": "9003",
-							"path": [
-								"removebookfromcart",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "carttotalvalue",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9003/carttotal",
-							"host": [
-								"localhost"
-							],
-							"port": "9003",
-							"path": [
-								"carttotal"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UserSignUP",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"mobileNumber\":\"8555058332\",\r\n    \"password\":\"password\",\r\n    \"email\":\"kmohanr5@gmail.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9003/registeruser",
-							"host": [
-								"localhost"
-							],
-							"port": "9003",
-							"path": [
-								"registeruser"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Buy Now URls",
-			"item": [
-				{
-					"name": "Buy Now URL",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"bookDTO\":{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9004/buynow",
-							"host": [
-								"localhost"
-							],
-							"port": "9004",
-							"path": [
-								"buynow"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Buy Products Present in Cart",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"addressDTO\" :{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n        },\r\n    \"book\":[{\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    },\r\n    {\r\n    \"bookName\":\"The Intelligent Investor\",\r\n    \"bookPrice\":\"449\",\r\n    \"bookAuthor\":\"Graham Benjamin\",\r\n    \"publishedYear\":\"2003\"\r\n    }]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:9004/buyallproductsincart",
-							"host": [
-								"localhost"
-							],
-							"port": "9004",
-							"path": [
-								"buyallproductsincart"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Buy Books in Cart",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "token",
-								"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI4MTIxNjU1NjAyIiwiaWF0IjoxNjQzMTE1MjE2fQ.JFMIsu0LsjtX67B0jiqKmnUaLChCVMAAtd5BUJhiu5k",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"name\":\"Mohan\",\r\n        \"address\":\"5/223\",\r\n        \"city\":\"Adoni\",\r\n        \"state\":\"Andhra Pradesh\",\r\n        \"pinCode\":\"518301\",\r\n        \"mobileNumber\":\"8555058332\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:8081/bookstore/buyproductsincart",
-							"host": [
-								"localhost"
-							],
-							"port": "8081",
-							"path": [
-								"bookstore",
-								"buyproductsincart"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Buy Books Value",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:9004/carttotal",
-							"host": [
-								"localhost"
-							],
-							"port": "9004",
-							"path": [
-								"carttotal"
-							]
-						}
-					},
-					"response": []
-				}
-			]
+			],
+			"description": "folder with API's of Microservices"
 		}
 	]
 }

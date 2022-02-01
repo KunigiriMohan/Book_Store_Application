@@ -74,7 +74,7 @@ public class BookStoreUserService implements IBookStoreUserService {
      * Method to update User Details
      * @param id
      * @param userDTO
-     * @return
+     * @return : Stored User Object
      */
     @Override
     public User updateUser(Long id, UserDTO userDTO) {
@@ -83,6 +83,11 @@ public class BookStoreUserService implements IBookStoreUserService {
         return bookStoreUserRepository.save(user);
     }
 
+    /**
+     * Method to get User by userid
+     * @param id
+     * @return : User details of that userid
+     */
     @Override
     public User getUserByID(Long id) {
         return bookStoreUserRepository.findById(id).get();

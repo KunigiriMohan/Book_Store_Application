@@ -28,11 +28,11 @@ public class BookStoreHomeController {
      * @param bookDTO
      * @return : Book Object
      */
-    @PostMapping("/addbook")
+    /*@PostMapping("/addbook")
     public Book addBook(@RequestBody BookDTO bookDTO){
         Book book = new Book(bookDTO);
         return iBookStoreHomeService.addBook(book);
-    }
+    }*/
 
     /**
      * API for get Book Object by ID

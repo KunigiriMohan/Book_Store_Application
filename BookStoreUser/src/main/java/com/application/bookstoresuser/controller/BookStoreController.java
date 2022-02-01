@@ -30,8 +30,7 @@ public class BookStoreController {
      */
     @PostMapping("/registeruser")
     public User generateUser(@RequestBody User user){
-        User userDetailUser = iBookStoreUserService.createUser(user);
-        return userDetailUser;
+        return iBookStoreUserService.createUser(user);
     }
 
     /**

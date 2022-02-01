@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 /**
  * @Service : creating service layer
  * @Autowired : enabling automatic dependency Injection
@@ -26,10 +27,10 @@ public class BookStoreHomeService implements IBookStoreHomeService {
      * @param book
      * @return : Object of Added Book
      */
-    @Override
+    /*@Override
     public Book addBook(Book book) {
         return bookStoreHomeRepository.save(book);
-    }
+    }*/
 
     /**
      * Method to get all books in Home page

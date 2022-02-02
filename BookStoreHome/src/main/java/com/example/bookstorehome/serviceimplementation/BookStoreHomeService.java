@@ -1,5 +1,6 @@
 package com.example.bookstorehome.serviceimplementation;
 
+import com.example.bookstorehome.exception.BookStoreHomeException;
 import com.example.bookstorehome.model.Book;
 import com.example.bookstorehome.repository.BookStoreHomeRepository;
 import com.example.bookstorehome.service.IBookStoreHomeService;
@@ -44,10 +45,14 @@ public class BookStoreHomeService implements IBookStoreHomeService {
     /**
      * Method to get Book Object by Id from Home Page
      * @param id
-     * @return
+     * @return : Book
      */
     @Override
     public Book getBookById(Long id) {
-        return bookStoreHomeRepository.findById(id).get();
+        try{
+            return bookStoreHomeRepository.findById(id).get();
+        }catch (Exception e){
+            throw new BookStoreHomeException("Book Not Found ");
+        }
     }
 }

@@ -1,10 +1,9 @@
 package com.application.bookstore.serviceimplementation;
 
-import com.application.bookstore.dto.BookDTO;
 import com.application.bookstore.dto.UserDTO;
 import com.application.bookstore.exception.BookStoreException;
+import com.application.bookstore.exception.UserException;
 import com.application.bookstore.model.Book;
-import com.application.bookstore.model.User;
 import com.application.bookstore.repository.BookStoreCartRepository;
 import com.application.bookstore.repository.BookStoreUserRepository;
 import com.application.bookstore.service.IBookStoreCartService;
@@ -32,17 +31,17 @@ public class BookStoreCartService implements IBookStoreCartService {
 
     /**
      * Method to Add Book to Cart
-     * @param bookDTO
+     * @param book
      * @return : Object of added Book
      */
     @Override
     public Book addBook(Book book,Long userId) {
-        Optional<User> user = bookStoreUserRepository.findById(userId);
+        Optional<com.application.bookstore.model.User> user = bookStoreUserRepository.findById(userId);
         if(user.isPresent()){
             book.setUser(user.get());
         }
         else{
-            throw new BookStoreException("User not found");
+            throw new BookStoreException("UserException not found");
         }
         return bookStoreCartRepository.save(book);
     }
@@ -53,7 +52,11 @@ public class BookStoreCartService implements IBookStoreCartService {
      */
     @Override
     public void removeBookfromCart(Long iD) {
-        bookStoreCartRepository.deleteById(iD);
+        try{
+            bookStoreCartRepository.deleteById(iD);
+        }catch (Exception exception){
+            throw new BookStoreException("Book Not Found");
+        }
     }
 
     /**
@@ -65,54 +68,83 @@ public class BookStoreCartService implements IBookStoreCartService {
         return bookStoreCartRepository.findAll();
     }
 
-    /**
-     * implementing method creatingUser in DB
+
+    /***
+     * Method to register user
+     * @param user
+     * @return : Object of registered user
      */
     @Override
-    public User createUser(User user){
+    public com.application.bookstore.model.User createUser(com.application.bookstore.model.User user){
         if(bookStoreUserRepository.findAll().size()==0){
             return bookStoreUserRepository.save(user);
         }
         else{
-            User userDetails=bookStoreUserRepository.getUserDetails(user.getMobileNumber());
+            com.application.bookstore.model.User userDetails=bookStoreUserRepository.getUserDetails(user.getMobileNumber());
             if(userDetails==null){
                 return bookStoreUserRepository.save(user);
             }
             else{
-                throw new BookStoreException("User Already Present");
+                throw new UserException("UserException Already Present");
             }
         }
     }
     /**
-     * Method to Delete User by id
+     * Method to Delete UserException by id
      * @param id
      */
     @Override
     public void deletebyID(Long id) {
-        bookStoreUserRepository.deleteById(id);
+        try{
+            bookStoreUserRepository.deleteById(id);
+        }
+        catch (Exception exception){
+            throw new UserException("UserException Not Found");
+        }
     }
 
     /**
-     * Method to update User Details
+     * Method to update UserException Details
      * @param id
      * @param userDTO
      * @return
      */
     @Override
-    public User updateUser(Long id, UserDTO userDTO) {
-        User user = bookStoreUserRepository.getById(id);
-        user.updateUser(userDTO);
-        return bookStoreUserRepository.save(user);
+    public com.application.bookstore.model.User updateUser(Long id, UserDTO userDTO) {
+        try{
+            com.application.bookstore.model.User user = bookStoreUserRepository.getById(id);
+            user.updateUser(userDTO);
+            return bookStoreUserRepository.save(user);
+        }catch (Exception exception){
+            throw new UserException("User Not Found");
+        }
     }
 
+    /**
+     * Method to get List Books present in cart of user
+     * @param id
+     * @return : List of Books
+     */
     @Override
     public List<Book> getBookCartbyUserid(Long id) {
-        return bookStoreCartRepository.getBooksByUserID(id);
+        try {
+            return bookStoreCartRepository.getBooksByUserID(id);
+        }catch (Exception exception){
+            throw new UserException("User Not Found");
+        }
     }
 
+    /**
+     * Method to delete Book in cart by using Userid
+     * @param id
+     */
     @Override
     public void deleteBookByUserId(Long id) {
-        bookStoreCartRepository.deleteBooksByUserIDinCart(id);
+        try {
+            bookStoreCartRepository.deleteBooksByUserIDinCart(id);
+        }catch (Exception exception){
+            throw new BookStoreException("Book Not Found");
+        }
     }
 
 }

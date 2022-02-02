@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @ExceptionHandler : Creating Exception Handler method to handle Exceptions Thrown
  */
 @ControllerAdvice
-public class BookStoreUserEXceptionHandler {
+public class BookStoreCartExceptionHandler {
     private static final String message = " Exception while processing REST Request";
 
 
@@ -55,5 +55,16 @@ public class BookStoreUserEXceptionHandler {
     public ResponseEntity<ResponseDTO> missingRequestHeaderException(MissingRequestHeaderException exception){
         ResponseDTO responseDTO = new ResponseDTO(message ,"Enter your Token",HttpStatus.BAD_REQUEST);
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.BAD_REQUEST);
+    }
+
+    /**
+     * Exception Handler UserException
+     * @param exception
+     * @return : REsponseEntity of Exception
+     */
+    @ExceptionHandler(UserException.class)
+    public ResponseEntity<ResponseDTO> handlerBookStoreException(UserException userException){
+        ResponseDTO responseDTO = new ResponseDTO(message,userException.getMessage(),HttpStatus.BAD_REQUEST );
+        return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
     }
 }

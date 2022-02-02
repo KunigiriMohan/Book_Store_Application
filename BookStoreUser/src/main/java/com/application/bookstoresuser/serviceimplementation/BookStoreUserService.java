@@ -2,6 +2,7 @@ package com.application.bookstoresuser.serviceimplementation;
 
 import com.application.bookstoresuser.dto.UserDTO;
 import com.application.bookstoresuser.exception.BookStoreException;
+import com.application.bookstoresuser.exception.UserNotFoundException;
 import com.application.bookstoresuser.model.User;
 import com.application.bookstoresuser.repository.BookStoreUserRepository;
 import com.application.bookstoresuser.service.IBookStoreUserService;
@@ -67,7 +68,11 @@ public class BookStoreUserService implements IBookStoreUserService {
      */
     @Override
     public void deletebyID(Long id) {
-        bookStoreUserRepository.deleteById(id);
+        try {
+            bookStoreUserRepository.deleteById(id);
+        }catch (Exception exception){
+            throw new UserNotFoundException("User Not Found ");
+        }
     }
 
     /**
@@ -77,10 +82,14 @@ public class BookStoreUserService implements IBookStoreUserService {
      * @return : Stored User Object
      */
     @Override
-    public User updateUser(Long id, UserDTO userDTO) {
-        User user = bookStoreUserRepository.getById(id);
-        user.updateUser(userDTO);
-        return bookStoreUserRepository.save(user);
+    public User updateUser(Long id,  UserDTO userDTO) {
+        try{
+            User user = bookStoreUserRepository.getById(id);
+            user.updateUser(userDTO);
+            return bookStoreUserRepository.save(user);
+        }catch (Exception exception){
+            throw new UserNotFoundException("User Not Found ");
+        }
     }
 
     /**
@@ -90,6 +99,10 @@ public class BookStoreUserService implements IBookStoreUserService {
      */
     @Override
     public User getUserByID(Long id) {
-        return bookStoreUserRepository.findById(id).get();
+        try{
+            return bookStoreUserRepository.findById(id).get();
+        }catch (Exception exception){
+            throw new UserNotFoundException("User Not Found ");
+        }
     }
 }

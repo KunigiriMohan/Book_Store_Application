@@ -33,7 +33,7 @@ public class BookStoreCartController {
 
     /**
      * API for save Book in DB
-     * @param
+     * @param : addBookToCart
      * @return : Object of added Book
      */
     @PostMapping("/addbook")
@@ -59,13 +59,17 @@ public class BookStoreCartController {
         bookStoreCartService.removeBookfromCart(id);
     }
 
+    /**
+     * API to get total Value of all books present Cart
+     * @return
+     */
     @GetMapping("carttotal")
     public Long totalCartValue(){return bookStoreCartRepository.cartValue();}
 
     /**
-     * API for registering User for App
+     * API for registering UserException for App
      * @param user
-     * @return : Creating User Data
+     * @return : Creating UserException Data
      */
     @PostMapping("/registeruser")
     public User generateUser(@RequestBody User user){
@@ -74,7 +78,7 @@ public class BookStoreCartController {
     }
 
     /**
-     * API for Delete User by id
+     * API for Delete UserException by id
      * @param id
      * @throws EmptyResultDataAccessException
      */
@@ -93,6 +97,10 @@ public class BookStoreCartController {
         return bookStoreCartService.updateUser(updateUserData.getId(),updateUserData.getUserDTO());
     }
 
+    /**
+     * API to delete Book by Id
+     * @param id
+     */
     @DeleteMapping("/deletebookbyuserid/{id}")
     public void deleteBookbyUserID(@PathVariable("id") Long id){
         bookStoreCartService.deleteBookByUserId(id);

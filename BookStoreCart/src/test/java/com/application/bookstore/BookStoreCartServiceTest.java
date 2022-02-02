@@ -98,7 +98,7 @@ public class BookStoreCartServiceTest {
     }
 
     /**
-     * User Related Testing
+     * UserException Related Testing
      */
     @Test
     public void registerUser(){

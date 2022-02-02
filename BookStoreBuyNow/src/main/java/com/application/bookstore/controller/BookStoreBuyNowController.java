@@ -31,7 +31,7 @@ public class BookStoreBuyNowController {
     /**
      * API for buying Book from Home page using id
      * @param orderDATA
-     * @return
+     * @return : Book
      */
     @PostMapping("/buynow")
     public Book buyNow(@RequestBody OrderDATA orderDATA){
@@ -41,13 +41,17 @@ public class BookStoreBuyNowController {
     /**
      * API for buying Books present in Cart
      * @param orderDATACart
-     * @return
+     * @return : List of Books present in Cart
      */
     @PostMapping("/buyallproductsincart")
     public List<Book> buyNowBooksinCart(@RequestBody OrderDATACart orderDATACart){
         return iBookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
     }
 
+    /**
+     * API to get total price of all books present in Cart
+     * @return : Total Value of Books present in Cart
+     */
     @GetMapping("/carttotal")
     public Long totalCartValue(){return bookStoreBuyNowRepository.cartValue();}
 }

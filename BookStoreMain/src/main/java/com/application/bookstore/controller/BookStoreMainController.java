@@ -11,9 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
-
 import javax.validation.Valid;
-import java.util.Arrays;
+
 
 /**
  * @RestController : Defining Class as a RestController
@@ -65,7 +64,7 @@ public class BookStoreMainController {
      * @param : user
      * @return : ResponseEntity of token
      */
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<ResponseDTO> userLogin(@Valid @RequestBody UserDTO userDTO) {
         User user = new User(userDTO);
         String loginUser = new RestTemplate().postForObject(propertyBean.getLoginURL(), user,String.class);

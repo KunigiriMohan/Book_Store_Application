@@ -2,7 +2,7 @@ package com.example.bookstorehome;
 
 import com.example.bookstorehome.controller.BookStoreHomeController;
 import com.example.bookstorehome.model.Book;
-import com.example.bookstorehome.service.IBookStoreHomeService;
+import com.example.bookstorehome.service.BookStoreHomeService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 public class BookStoreHomeControllerTest {
 
     @Mock
-    IBookStoreHomeService iBookStoreHomeService;
+    BookStoreHomeService bookStoreHomeService;
 
     @InjectMocks
     BookStoreHomeController bookStoreHomeController;
@@ -33,7 +33,7 @@ public class BookStoreHomeControllerTest {
 
     @Test
     public void getBookById(){
-        when(iBookStoreHomeService.getBookById(anyLong())).thenReturn(book1);
+        when(bookStoreHomeService.getBookById(anyLong())).thenReturn(book1);
         Book bookFromHome = bookStoreHomeController.getBookById(anyLong());
         assertEquals(book1,bookFromHome);
     }
@@ -44,7 +44,7 @@ public class BookStoreHomeControllerTest {
         bookList.add(book2);
         bookList.add(book3);
         bookList.add(book4);
-        when(iBookStoreHomeService.getAllBooks()).thenReturn(bookList);
+        when(bookStoreHomeService.getAllBooks()).thenReturn(bookList);
         List<Book> booksInCart = bookStoreHomeController.getAllBooks();
         assertEquals(bookList,booksInCart);
     }

@@ -4,7 +4,7 @@ import com.application.bookstore.model.Book;
 import com.application.bookstore.model.OrderDATA;
 import com.application.bookstore.model.OrderDATACart;
 import com.application.bookstore.repository.BookStoreBuyNowRepository;
-import com.application.bookstore.service.IBookStoreBuyNowService;
+import com.application.bookstore.service.BookStoreBuyNowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +23,7 @@ public class BookStoreBuyNowController {
      * Autowiring Service Interface for Dependency Injection
      */
     @Autowired
-    IBookStoreBuyNowService iBookStoreBuyNowService;
+    BookStoreBuyNowService bookStoreBuyNowService;
 
     @Autowired
     BookStoreBuyNowRepository bookStoreBuyNowRepository;
@@ -35,7 +35,7 @@ public class BookStoreBuyNowController {
      */
     @PostMapping("/buynow")
     public Book buyNow(@RequestBody OrderDATA orderDATA){
-        return iBookStoreBuyNowService.buyNow(orderDATA);
+        return bookStoreBuyNowService.buyNow(orderDATA);
     }
 
     /**
@@ -45,7 +45,7 @@ public class BookStoreBuyNowController {
      */
     @PostMapping("/buyallproductsincart")
     public List<Book> buyNowBooksinCart(@RequestBody OrderDATACart orderDATACart){
-        return iBookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
+        return bookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
     }
 
     /**

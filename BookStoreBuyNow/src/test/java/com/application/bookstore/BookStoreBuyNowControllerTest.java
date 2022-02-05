@@ -6,12 +6,11 @@ import com.application.bookstore.model.Book;
 import com.application.bookstore.model.OrderDATA;
 import com.application.bookstore.model.OrderDATACart;
 import com.application.bookstore.repository.BookStoreBuyNowRepository;
-import com.application.bookstore.service.IBookStoreBuyNowService;
+import com.application.bookstore.service.BookStoreBuyNowService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoSettings;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
@@ -20,14 +19,13 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
 public class BookStoreBuyNowControllerTest {
 
     @Mock
-    IBookStoreBuyNowService iBookStoreBuyNowService;
+    BookStoreBuyNowService bookStoreBuyNowService;
 
     @InjectMocks
     BookStoreBuyNowController bookStoreBuyNowController;
@@ -53,7 +51,7 @@ public class BookStoreBuyNowControllerTest {
 
     @Test
     public void buyNow(){
-        when(iBookStoreBuyNowService.buyNow(Mockito.any(OrderDATA.class))).thenReturn(book1);
+        when(bookStoreBuyNowService.buyNow(Mockito.any(OrderDATA.class))).thenReturn(book1);
         Book bookBuyed=bookStoreBuyNowController.buyNow(orderDATA);
         assertEquals(book1,bookBuyed);
     }
@@ -63,7 +61,7 @@ public class BookStoreBuyNowControllerTest {
         bookList.add(book1);
         bookList.add(book2);
         bookList.add(book3);
-        when(iBookStoreBuyNowService.buyNowBooksinCart(Mockito.any(OrderDATACart.class))).thenReturn(bookList);
+        when(bookStoreBuyNowService.buyNowBooksinCart(Mockito.any(OrderDATACart.class))).thenReturn(bookList);
         List<Book> booksPresentInCart = bookStoreBuyNowController.buyNowBooksinCart(orderDATACart);
         assertEquals(bookList,booksPresentInCart);
     }

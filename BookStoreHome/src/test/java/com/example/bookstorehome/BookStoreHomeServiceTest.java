@@ -2,7 +2,7 @@ package com.example.bookstorehome;
 
 import com.example.bookstorehome.model.Book;
 import com.example.bookstorehome.repository.BookStoreHomeRepository;
-import com.example.bookstorehome.serviceimplementation.BookStoreHomeService;
+import com.example.bookstorehome.serviceimplementation.BookStoreHomeServiceImplementation;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -21,7 +21,7 @@ public class BookStoreHomeServiceTest {
     BookStoreHomeRepository bookStoreHomeRepository;
 
     @InjectMocks
-    BookStoreHomeService bookStoreHomeService;
+    BookStoreHomeServiceImplementation bookStoreHomeService;
 
     Book book1 =new Book(1L,"The Intelligent Investor",100L,"graham","2014");
     Book book2 =new Book(1L,"The Intelligent Investor",100L,"graham","2014");

@@ -4,8 +4,7 @@ import com.application.bookstoresuser.controller.BookStoreController;
 import com.application.bookstoresuser.dto.UpdateUserData;
 import com.application.bookstoresuser.dto.UserDTO;
 import com.application.bookstoresuser.model.User;
-import com.application.bookstoresuser.service.IBookStoreUserService;
-import com.application.bookstoresuser.serviceimplementation.BookStoreUserService;
+import com.application.bookstoresuser.service.BookStoreUserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -20,7 +19,7 @@ import static org.mockito.Mockito.*;
 public class BookStoreUserControllerTest {
 
     @Mock
-    IBookStoreUserService iBookStoreUserService;
+    BookStoreUserService bookStoreUserService;
 
     @InjectMocks
     BookStoreController bookStoreController;
@@ -35,7 +34,7 @@ public class BookStoreUserControllerTest {
 
     @Test
     public void createUser(){
-        when(iBookStoreUserService.createUser(Mockito.any(User.class))).thenReturn(user);
+        when(bookStoreUserService.createUser(Mockito.any(User.class))).thenReturn(user);
         User userCreated = bookStoreController.generateUser(user);
         assertEquals(user,userCreated);
     }
@@ -43,26 +42,26 @@ public class BookStoreUserControllerTest {
     @Test
     public void deleteUserById(){
         bookStoreController.deleteUser(anyLong());
-        verify(iBookStoreUserService,times(1)).deletebyID(anyLong());
+        verify(bookStoreUserService,times(1)).deletebyID(anyLong());
     }
 
     @Test
     public void updateUserById(){
-        when(iBookStoreUserService.updateUser(anyLong(),Mockito.any(UserDTO.class))).thenReturn(user);
+        when(bookStoreUserService.updateUser(anyLong(),Mockito.any(UserDTO.class))).thenReturn(user);
         User userUpdated = bookStoreController.updateUser(updateUserData);
         assertEquals(user,userUpdated);
     }
 
     @Test
     public void loginUser(){
-        when(iBookStoreUserService.generateToken(Mockito.any(User.class))).thenReturn(("Token"));
+        when(bookStoreUserService.generateToken(Mockito.any(User.class))).thenReturn(("Token"));
         String generatedToken = bookStoreController.loginUser(user);
         assertNotNull(generatedToken);
     }
 
     @Test
     public void getUserById(){
-        when(iBookStoreUserService.getUserByID(anyLong())).thenReturn(user);
+        when(bookStoreUserService.getUserByID(anyLong())).thenReturn(user);
         User userGot = bookStoreController.getUserById(anyLong());
         assertNotNull(userGot);
     }

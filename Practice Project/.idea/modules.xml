@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreBuyNow/BookStoreBuyNow.iml" filepath="$PROJECT_DIR$/../BookStoreBuyNow/BookStoreBuyNow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreCart/BookStoreCart.iml" filepath="$PROJECT_DIR$/../BookStoreCart/BookStoreCart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Practice/Book/BookStoreCart (1).iml" filepath="$PROJECT_DIR$/../../../Practice/Book/BookStoreCart (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreConfigServer/BookStoreConfigServer.iml" filepath="$PROJECT_DIR$/../BookStoreConfigServer/BookStoreConfigServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreHome/BookStoreHome.iml" filepath="$PROJECT_DIR$/../BookStoreHome/BookStoreHome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreMain/BookStoreMain.iml" filepath="$PROJECT_DIR$/../BookStoreMain/BookStoreMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BookStoreUser/BookStoreUser.iml" filepath="$PROJECT_DIR$/../BookStoreUser/BookStoreUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice Project.iml" filepath="$PROJECT_DIR$/Practice Project.iml" />
+    </modules>
+  </component>
+</project>

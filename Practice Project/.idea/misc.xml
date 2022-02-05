@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../BookStoreBuyNow/pom.xml" />
+        <option value="$PROJECT_DIR$/../BookStoreCart/pom.xml" />
+        <option value="$PROJECT_DIR$/../BookStoreConfigServer/pom.xml" />
+        <option value="$PROJECT_DIR$/../BookStoreHome/pom.xml" />
+        <option value="$PROJECT_DIR$/../BookStoreMain/pom.xml" />
+        <option value="$PROJECT_DIR$/../BookStoreUser/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../Practice/Book/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

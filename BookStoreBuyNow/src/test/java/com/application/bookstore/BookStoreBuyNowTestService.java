@@ -6,7 +6,7 @@ import com.application.bookstore.model.Book;
 import com.application.bookstore.model.OrderDATA;
 import com.application.bookstore.repository.BookStoreBuyNowAddressRepository;
 import com.application.bookstore.repository.BookStoreBuyNowRepository;
-import com.application.bookstore.serviceimplementation.BookStoreBuNowService;
+import com.application.bookstore.serviceimplementation.BookStoreBuNowServiceImplementation;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -21,7 +21,7 @@ public class BookStoreBuyNowTestService {
     BookStoreBuyNowRepository bookStoreBuyNowRepository;
 
     @InjectMocks
-    BookStoreBuNowService bookStoreBuNowService;
+    BookStoreBuNowServiceImplementation bookStoreBuNowServiceImplementation;
 
     @Mock
     BookStoreBuyNowAddressRepository bookStoreBuyNowAddressRepository;
@@ -39,7 +39,7 @@ public class BookStoreBuyNowTestService {
     public void buyNow(){
         Mockito.when(bookStoreBuyNowAddressRepository.save(Mockito.any(Address.class))).thenReturn(new Address(addressDTO));
         Mockito.when(bookStoreBuyNowRepository.save(Mockito.any(Book.class))).thenReturn(book1);
-        Book book = bookStoreBuNowService.buyNow(orderDATA);
+        Book book = bookStoreBuNowServiceImplementation.buyNow(orderDATA);
         assertNotNull(book);
     }
 

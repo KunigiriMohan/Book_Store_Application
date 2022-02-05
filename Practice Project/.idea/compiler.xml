@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BookStoreBuyNow" />
+        <module name="BookStoreMain" />
+        <module name="BookStoreCart" />
+        <module name="BookStoreConfigServer" />
+        <module name="BookStoreUser" />
+        <module name="BookStoreCart (1)" />
+        <module name="BookStoreHome" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BookStoreBuyNow" target="1.8" />
+      <module name="BookStoreCart" target="1.8" />
+      <module name="BookStoreCart (1)" target="1.8" />
+      <module name="BookStoreConfigServer" target="1.8" />
+      <module name="BookStoreHome" target="1.8" />
+      <module name="BookStoreMain" target="1.8" />
+      <module name="BookStoreUser" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BookStoreBuyNow" options="-parameters" />
+      <module name="BookStoreCart" options="-parameters" />
+      <module name="BookStoreCart (1)" options="-parameters" />
+      <module name="BookStoreConfigServer" options="-parameters" />
+      <module name="BookStoreHome" options="-parameters" />
+      <module name="BookStoreMain" options="-parameters" />
+      <module name="BookStoreUser" options="-parameters" />
+    </option>
+  </component>
+</project>

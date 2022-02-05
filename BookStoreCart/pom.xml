@@ -63,10 +63,16 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
-            <!--<version>1.4.01</version>-->
+            &lt;!&ndash;<version>1.4.01</version>&ndash;&gt;
+            <scope>compile</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>com.github.ulisesbocchio</groupId>
+            <artifactId>jasypt-spring-boot</artifactId>
+            <version>3.0.3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

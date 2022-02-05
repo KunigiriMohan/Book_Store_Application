@@ -7,8 +7,7 @@ import com.application.bookstore.model.AddBookToCart;
 import com.application.bookstore.model.Book;
 import com.application.bookstore.model.User;
 import com.application.bookstore.repository.BookStoreCartRepository;
-import com.application.bookstore.serviceimplementation.BookStoreCartService;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.application.bookstore.serviceimplementation.BookStoreCartServiceImplementation;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -17,7 +16,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -31,7 +29,7 @@ public class BookStoreCartControllerTest {
     BookStoreCartController bookStoreCartController;
 
     @Mock
-    BookStoreCartService bookStoreCartService;
+    BookStoreCartServiceImplementation bookStoreCartServiceImplementation;
 
     @Mock
     BookStoreCartRepository bookStoreCartRepository;
@@ -52,7 +50,7 @@ public class BookStoreCartControllerTest {
 
     @Test
     public void addBookTOCart(){
-        when(bookStoreCartService.addBook(Mockito.any(Book.class),Mockito.anyLong())).thenReturn(book1);
+        when(bookStoreCartServiceImplementation.addBook(Mockito.any(Book.class),Mockito.anyLong())).thenReturn(book1);
         Book book = bookStoreCartController.addBooktoCart(addBookToCart1);
         assertEquals(book1,book);
     }
@@ -62,7 +60,7 @@ public class BookStoreCartControllerTest {
         booksInCart.add(book1);
         booksInCart.add(book2);
         booksInCart.add(book3);
-        when(bookStoreCartService.getBookCartbyUserid(Mockito.anyLong())).thenReturn(booksInCart);
+        when(bookStoreCartServiceImplementation.getBookCartbyUserid(Mockito.anyLong())).thenReturn(booksInCart);
         List<Book> bookList = bookStoreCartController.bookPresentinCart(user.getID());
         assertEquals(booksInCart,bookList);
     }
@@ -70,7 +68,7 @@ public class BookStoreCartControllerTest {
     @Test
     public void removeBookFromCart(){
         bookStoreCartController.removeBookfromCart(anyLong());
-        verify(bookStoreCartService,times(1)).removeBookfromCart(anyLong());
+        verify(bookStoreCartServiceImplementation,times(1)).removeBookfromCart(anyLong());
     }
 
     @Test
@@ -82,7 +80,7 @@ public class BookStoreCartControllerTest {
 
     @Test
     public void createUser(){
-        when(bookStoreCartService.createUser(Mockito.any(User.class))).thenReturn(user);
+        when(bookStoreCartServiceImplementation.createUser(Mockito.any(User.class))).thenReturn(user);
         User userCreated = bookStoreCartController.generateUser(user);
         assertEquals(user,userCreated);
     }
@@ -90,12 +88,12 @@ public class BookStoreCartControllerTest {
     @Test
     public void deleteUserById(){
         bookStoreCartController.deleteUser(anyLong());
-        verify(bookStoreCartService,times(1)).deletebyID(anyLong());
+        verify(bookStoreCartServiceImplementation,times(1)).deletebyID(anyLong());
     }
 
     @Test
     public void updateUserById(){
-        when(bookStoreCartService.updateUser(anyLong(),Mockito.any(UserDTO.class))).thenReturn(user);
+        when(bookStoreCartServiceImplementation.updateUser(anyLong(),Mockito.any(UserDTO.class))).thenReturn(user);
         User userUpdated = bookStoreCartController.updateUser(updateUserData);
         assertEquals(user,userUpdated);
     }
@@ -103,6 +101,6 @@ public class BookStoreCartControllerTest {
     @Test
     public void deleteBookByUserId(){
         bookStoreCartController.deleteBookbyUserID(anyLong());
-        verify(bookStoreCartService,times(1)).deleteBookByUserId(anyLong());
+        verify(bookStoreCartServiceImplementation,times(1)).deleteBookByUserId(anyLong());
     }
 }

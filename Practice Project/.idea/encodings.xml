@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../BookStoreBuyNow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreBuyNow/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreCart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreCart/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreConfigServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreConfigServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreHome/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreHome/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreMain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreMain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreUser/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../BookStoreUser/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Practice/Book/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../Practice/Book/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -58,4 +58,15 @@ public class BookStoreUserEXceptionHandler {
         ResponseDTO responseDTO = new ResponseDTO(message ,"Enter your Token",HttpStatus.BAD_REQUEST);
         return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.BAD_REQUEST);
     }
+
+    /**
+     * Exception Handler UserNotFoundException
+     * @param exception
+     * @return : REsponseEntity of Exception
+     */
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<ResponseDTO> handlerBookStoreException(UserNotFoundException userNotFoundException){
+        ResponseDTO responseDTO = new ResponseDTO(message,userNotFoundException.getMessage(),HttpStatus.BAD_REQUEST );
+        return new ResponseEntity<ResponseDTO>(responseDTO,HttpStatus.OK);
+    }
 }

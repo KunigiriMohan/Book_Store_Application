@@ -2,7 +2,7 @@ package com.example.bookstorehome.controller;
 
 import com.example.bookstorehome.dto.BookDTO;
 import com.example.bookstorehome.model.Book;
-import com.example.bookstorehome.service.IBookStoreHomeService;
+import com.example.bookstorehome.service.BookStoreHomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +21,7 @@ public class BookStoreHomeController {
      * Autowiring Service Interface for Dependency Injection
      */
     @Autowired
-    IBookStoreHomeService iBookStoreHomeService;
+    BookStoreHomeService bookStoreHomeService;
 
     /**
      * API for adding book to DB
@@ -31,7 +31,7 @@ public class BookStoreHomeController {
     @PostMapping("/addbook")
     public Book addBook(@RequestBody BookDTO bookDTO){
         Book book = new Book(bookDTO);
-        return iBookStoreHomeService.addBook(book);
+        return bookStoreHomeService.addBook(book);
     }
 
     /**
@@ -41,7 +41,7 @@ public class BookStoreHomeController {
      */
     @GetMapping("/getbyid/{id}")
     public Book getBookById(@PathVariable("id") Long id){
-        return iBookStoreHomeService.getBookById(id);
+        return bookStoreHomeService.getBookById(id);
     }
 
     /**
@@ -50,6 +50,6 @@ public class BookStoreHomeController {
      */
     @GetMapping("/getallbooks")
     public List<Book> getAllBooks(){
-        return iBookStoreHomeService.getAllBooks();
+        return bookStoreHomeService.getAllBooks();
     }
 }

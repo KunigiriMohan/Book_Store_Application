@@ -2,7 +2,7 @@ package com.application.bookstoresuser.controller;
 
 import com.application.bookstoresuser.dto.UpdateUserData;
 import com.application.bookstoresuser.model.User;
-import com.application.bookstoresuser.service.IBookStoreUserService;
+import com.application.bookstoresuser.service.BookStoreUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ public class BookStoreController {
      * Autowiring for Dependency Injection
      */
     @Autowired
-    IBookStoreUserService iBookStoreUserService;
+    BookStoreUserService bookStoreUserService;
 
     /**
      * API for registering User for App
@@ -30,8 +30,7 @@ public class BookStoreController {
      */
     @PostMapping("/registeruser")
     public User generateUser(@RequestBody User user){
-        User userDetailUser = iBookStoreUserService.createUser(user);
-        return userDetailUser;
+        return bookStoreUserService.createUser(user);
     }
 
     /**
@@ -41,7 +40,7 @@ public class BookStoreController {
      */
     @PostMapping("/login")
     public String loginUser(@RequestBody User user){
-        String userDetailUser = iBookStoreUserService.generateToken(user);
+        String userDetailUser = bookStoreUserService.generateToken(user);
         return userDetailUser;
     }
 
@@ -52,7 +51,7 @@ public class BookStoreController {
      */
     @DeleteMapping("/deletebyid/{id}")
     public void deleteUser(@PathVariable("id") Long id) throws EmptyResultDataAccessException {
-        iBookStoreUserService.deletebyID(id);
+        bookStoreUserService.deletebyID(id);
     }
 
     /**
@@ -62,11 +61,11 @@ public class BookStoreController {
      */
     @PostMapping("updateuser")
     public User updateUser(@RequestBody UpdateUserData updateUserData){
-        return iBookStoreUserService.updateUser(updateUserData.getId(),updateUserData.getUserDTO());
+        return bookStoreUserService.updateUser(updateUserData.getId(),updateUserData.getUserDTO());
     }
 
     @GetMapping("/getuserbyid/{id}")
     public User getUserById(@PathVariable("id") Long id){
-        return iBookStoreUserService.getUserByID(id);
+        return bookStoreUserService.getUserByID(id);
     }
 }

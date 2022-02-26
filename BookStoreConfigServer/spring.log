@@ -1,26 +1,26 @@
-2022-01-29 00:15:04.160  INFO 15044 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Starting BookStoreConfigServerApplication using Java 1.8.0_301 on Mohan with PID 15044 (E:\CFP_Project\Book_Store_Application\BookStoreConfigServer\target\classes started by kmoha in E:\CFP_Project\Book_Store_Application\BookStoreCart)
-2022-01-29 00:15:04.223  INFO 15044 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 00:15:04.725  INFO 15044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-29 00:15:04.725  INFO 15044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-29 00:15:08.390  INFO 15044 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e7118b6-01bd-342c-8d2d-597ae1b9eed5
-2022-01-29 00:15:09.748  INFO 15044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
-2022-01-29 00:15:09.826  INFO 15044 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
-2022-01-29 00:15:09.826  INFO 15044 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-2022-01-29 00:15:09.826  INFO 15044 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2022-01-29 00:15:09.921  INFO 15044 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
-2022-01-29 00:15:09.952  INFO 15044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 00:15:09.952  INFO 15044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 00:15:10.867  INFO 15044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 00:15:10.868  INFO 15044 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6045 ms
-2022-01-29 00:15:11.540  INFO 15044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-29 00:15:12.198  INFO 15044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
-2022-01-29 00:15:12.417  INFO 15044 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Started BookStoreConfigServerApplication in 11.142 seconds (JVM running for 19.818)
-2022-01-29 00:15:35.458  INFO 15044 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 00:15:35.458  INFO 15044 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 00:15:35.458  INFO 15044 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-01-29 00:15:36.272  WARN 15044 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 00:15:37.778  WARN 15044 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 00:15:38.343  INFO 15044 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
+2022-02-04 06:20:16.031  INFO 4456 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Starting BookStoreConfigServerApplication using Java 1.8.0_301 on Mohan with PID 4456 (E:\CFP_Project\Book_Store_Application\BookStoreConfigServer\target\classes started by kmoha in E:\CFP_Project\Book_Store_Application\BookStoreCart)
+2022-02-04 06:20:16.040  INFO 4456 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : No active profile set, falling back to default profiles: default
+2022-02-04 06:20:16.794  INFO 4456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-04 06:20:16.795  INFO 4456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-04 06:20:22.149  INFO 4456 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e7118b6-01bd-342c-8d2d-597ae1b9eed5
+2022-02-04 06:20:24.452  INFO 4456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
+2022-02-04 06:20:24.459  INFO 4456 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+2022-02-04 06:20:24.461  INFO 4456 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2022-02-04 06:20:24.462  INFO 4456 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-02-04 06:20:24.569  INFO 4456 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+2022-02-04 06:20:24.595  INFO 4456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-04 06:20:24.597  INFO 4456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-04 06:20:24.818  INFO 4456 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-04 06:20:24.819  INFO 4456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8018 ms
+2022-02-04 06:20:27.179  INFO 4456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-04 06:20:29.624  INFO 4456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
+2022-02-04 06:20:30.356  INFO 4456 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Started BookStoreConfigServerApplication in 18.056 seconds (JVM running for 22.042)
+2022-02-04 06:20:31.371  INFO 4456 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-04 06:20:31.373  INFO 4456 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-04 06:20:31.378  INFO 4456 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-02-04 06:20:32.922  WARN 4456 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:20:42.974  WARN 4456 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:20:46.673  INFO 4456 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
 
 org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
@@ -42,7 +42,7 @@ org.springframework.cloud.config.server.environment.NoSuchLabelException: No suc
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$d45ab8d3.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$3a9db3fa.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
@@ -99,13 +99,13 @@ Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be 
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
 	... 69 common frames omitted
 
-2022-01-29 00:15:38.343  INFO 15044 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 00:15:38.343  WARN 15044 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 00:15:38.939  WARN 15044 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 00:15:39.819  INFO 15044 --- [http-nio-9999-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 00:19:10.774  WARN 15044 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 00:19:11.341  WARN 15044 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 00:19:11.857  INFO 15044 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
+2022-02-04 06:20:46.689  INFO 4456 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
+2022-02-04 06:20:46.705  WARN 4456 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:20:47.392  WARN 4456 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:20:48.189  INFO 4456 --- [http-nio-9999-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
+2022-02-04 06:22:15.091  WARN 4456 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:22:17.201  WARN 4456 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:22:17.842  INFO 4456 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
 
 org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
@@ -127,7 +127,7 @@ org.springframework.cloud.config.server.environment.NoSuchLabelException: No suc
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$d45ab8d3.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$3a9db3fa.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
@@ -184,33 +184,13 @@ Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be 
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
 	... 69 common frames omitted
 
-2022-01-29 00:19:11.857  INFO 15044 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 00:19:11.872  WARN 15044 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 00:19:12.359  WARN 15044 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 00:19:14.038  INFO 15044 --- [http-nio-9999-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 05:56:18.187  INFO 13420 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Starting BookStoreConfigServerApplication using Java 1.8.0_301 on Mohan with PID 13420 (E:\CFP_Project\Book_Store_Application\BookStoreConfigServer\target\classes started by kmoha in E:\CFP_Project\Book_Store_Application\BookStoreCart)
-2022-01-29 05:56:18.218  INFO 13420 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 05:56:18.421  INFO 13420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-29 05:56:18.421  INFO 13420 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-29 05:56:22.824  INFO 13420 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e7118b6-01bd-342c-8d2d-597ae1b9eed5
-2022-01-29 05:56:24.699  INFO 13420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
-2022-01-29 05:56:24.699  INFO 13420 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
-2022-01-29 05:56:24.699  INFO 13420 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-2022-01-29 05:56:24.699  INFO 13420 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2022-01-29 05:56:24.777  INFO 13420 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
-2022-01-29 05:56:24.808  INFO 13420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 05:56:24.808  INFO 13420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 05:56:25.262  INFO 13420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 05:56:25.262  INFO 13420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6841 ms
-2022-01-29 05:56:26.558  INFO 13420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-29 05:56:27.871  INFO 13420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
-2022-01-29 05:56:27.965  INFO 13420 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 05:56:27.965  INFO 13420 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 05:56:27.980  INFO 13420 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2022-01-29 05:56:28.340  INFO 13420 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Started BookStoreConfigServerApplication in 11.813 seconds (JVM running for 18.563)
-2022-01-29 05:56:29.215  WARN 13420 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 05:56:32.344  WARN 13420 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 05:56:33.203  INFO 13420 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
+2022-02-04 06:22:17.842  INFO 4456 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
+2022-02-04 06:22:17.857  WARN 4456 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:22:18.530  WARN 4456 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:22:19.514  INFO 4456 --- [http-nio-9999-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
+2022-02-04 06:24:01.813  WARN 4456 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:24:04.018  WARN 4456 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:24:04.752  INFO 4456 --- [http-nio-9999-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
 
 org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
@@ -232,7 +212,7 @@ org.springframework.cloud.config.server.environment.NoSuchLabelException: No suc
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$34a076b5.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$3a9db3fa.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
@@ -289,13 +269,13 @@ Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be 
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
 	... 69 common frames omitted
 
-2022-01-29 05:56:33.203  INFO 13420 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 05:56:33.219  WARN 13420 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 05:56:34.000  WARN 13420 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 05:56:35.094  INFO 13420 --- [http-nio-9999-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 06:01:20.425  WARN 13420 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:01:21.348  WARN 13420 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:01:22.285  INFO 13420 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
+2022-02-04 06:24:04.752  INFO 4456 --- [http-nio-9999-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
+2022-02-04 06:24:04.767  WARN 4456 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:24:05.440  WARN 4456 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:24:06.221  INFO 4456 --- [http-nio-9999-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
+2022-02-04 06:26:56.324  WARN 4456 --- [http-nio-9999-exec-7] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:26:57.169  WARN 4456 --- [http-nio-9999-exec-7] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:26:57.803  INFO 4456 --- [http-nio-9999-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
 
 org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
@@ -317,7 +297,7 @@ org.springframework.cloud.config.server.environment.NoSuchLabelException: No suc
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$34a076b5.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$3a9db3fa.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
@@ -374,13 +354,13 @@ Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be 
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
 	... 69 common frames omitted
 
-2022-01-29 06:01:22.285  INFO 13420 --- [http-nio-9999-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 06:01:22.300  WARN 13420 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:01:22.988  WARN 13420 --- [http-nio-9999-exec-3] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:01:23.972  INFO 13420 --- [http-nio-9999-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 06:36:47.451  WARN 13420 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:36:48.170  WARN 13420 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:36:48.904  INFO 13420 --- [http-nio-9999-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
+2022-02-04 06:26:57.803  INFO 4456 --- [http-nio-9999-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
+2022-02-04 06:26:57.819  WARN 4456 --- [http-nio-9999-exec-7] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 06:26:58.392  WARN 4456 --- [http-nio-9999-exec-7] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 06:26:59.193  INFO 4456 --- [http-nio-9999-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
+2022-02-04 08:21:22.032  WARN 4456 --- [http-nio-9999-exec-9] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 08:21:23.730  WARN 4456 --- [http-nio-9999-exec-9] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 08:21:24.338  INFO 4456 --- [http-nio-9999-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
 
 org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
@@ -402,7 +382,7 @@ org.springframework.cloud.config.server.environment.NoSuchLabelException: No suc
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$34a076b5.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
+	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$3a9db3fa.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
@@ -459,217 +439,7 @@ Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be 
 	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
 	... 69 common frames omitted
 
-2022-01-29 06:36:48.920  INFO 13420 --- [http-nio-9999-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 06:36:48.936  WARN 13420 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:36:49.811  WARN 13420 --- [http-nio-9999-exec-5] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:36:50.842  INFO 13420 --- [http-nio-9999-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 06:37:06.901  INFO 15024 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Starting BookStoreConfigServerApplication using Java 1.8.0_301 on Mohan with PID 15024 (E:\CFP_Project\Book_Store_Application\BookStoreConfigServer\target\classes started by kmoha in E:\CFP_Project\Book_Store_Application\BookStoreCart)
-2022-01-29 06:37:06.901  INFO 15024 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 06:37:07.010  INFO 15024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-29 06:37:07.010  INFO 15024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-29 06:37:08.916  INFO 15024 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e7118b6-01bd-342c-8d2d-597ae1b9eed5
-2022-01-29 06:37:09.760  INFO 15024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
-2022-01-29 06:37:09.760  INFO 15024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
-2022-01-29 06:37:09.776  INFO 15024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-2022-01-29 06:37:09.776  INFO 15024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2022-01-29 06:37:09.776  INFO 15024 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
-2022-01-29 06:37:09.791  INFO 15024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 06:37:09.791  INFO 15024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 06:37:09.979  INFO 15024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 06:37:09.979  INFO 15024 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2969 ms
-2022-01-29 06:37:10.744  INFO 15024 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-29 06:37:11.963  INFO 15024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
-2022-01-29 06:37:12.385  INFO 15024 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Started BookStoreConfigServerApplication in 6.952 seconds (JVM running for 10.065)
-2022-01-29 06:38:44.232  INFO 15024 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 06:38:44.232  INFO 15024 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 06:38:44.232  INFO 15024 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2022-01-29 06:38:46.951  WARN 15024 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:38:48.967  WARN 15024 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:38:49.951  INFO 15024 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
-
-org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.getLocations(JGitEnvironmentRepository.java:262) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.getLocations(MultipleJGitEnvironmentRepository.java:139) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.AbstractScmEnvironmentRepository.findOne(AbstractScmEnvironmentRepository.java:55) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.findOneFromCandidate(MultipleJGitEnvironmentRepository.java:188) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.findOne(MultipleJGitEnvironmentRepository.java:173) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.CompositeEnvironmentRepository.findOne(CompositeEnvironmentRepository.java:64) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentEncryptorEnvironmentRepository.findOne(EnvironmentEncryptorEnvironmentRepository.java:61) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentController.getEnvironment(EnvironmentController.java:132) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentController.defaultLabelIncludeOrigin(EnvironmentController.java:114) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) [spring-core-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:485) [spring-cloud-context-3.1.0.jar:3.1.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$c936ebeb.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
-Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be resolved
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:223) ~[org.eclipse.jgit-5.12.0.202106070339-r.jar:5.12.0.202106070339-r]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.checkout(JGitEnvironmentRepository.java:468) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	... 69 common frames omitted
-
-2022-01-29 06:38:49.951  INFO 15024 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 06:38:49.967  WARN 15024 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 06:38:50.748  WARN 15024 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 06:38:51.623  INFO 15024 --- [http-nio-9999-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
-2022-01-29 09:05:57.585  INFO 7756 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Starting BookStoreConfigServerApplication using Java 1.8.0_301 on Mohan with PID 7756 (E:\CFP_Project\Book_Store_Application\BookStoreConfigServer\target\classes started by kmoha in E:\CFP_Project\Book_Store_Application\BookStoreCart)
-2022-01-29 09:05:57.593  INFO 7756 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : No active profile set, falling back to default profiles: default
-2022-01-29 09:05:57.753  INFO 7756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-01-29 09:05:57.753  INFO 7756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-01-29 09:05:59.789  INFO 7756 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7e7118b6-01bd-342c-8d2d-597ae1b9eed5
-2022-01-29 09:06:01.099  INFO 7756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9999 (http)
-2022-01-29 09:06:01.105  INFO 7756 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
-2022-01-29 09:06:01.108  INFO 7756 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-2022-01-29 09:06:01.109  INFO 7756 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2022-01-29 09:06:01.119  INFO 7756 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
-2022-01-29 09:06:01.139  INFO 7756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-01-29 09:06:01.144  INFO 7756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
-2022-01-29 09:06:01.442  INFO 7756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-01-29 09:06:01.442  INFO 7756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3681 ms
-2022-01-29 09:06:02.489  INFO 7756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-01-29 09:06:04.029  INFO 7756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9999 (http) with context path ''
-2022-01-29 09:06:04.713  INFO 7756 --- [restartedMain] c.e.b.BookStoreConfigServerApplication   : Started BookStoreConfigServerApplication in 11.654 seconds (JVM running for 17.632)
-2022-01-29 09:06:13.380  INFO 7756 --- [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-01-29 09:06:13.384  INFO 7756 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-01-29 09:06:13.389  INFO 7756 --- [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-01-29 09:06:14.270  WARN 7756 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 09:06:17.219  WARN 7756 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 09:06:17.959  INFO 7756 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not refresh default label main
-
-org.springframework.cloud.config.server.environment.NoSuchLabelException: No such label: main
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:314) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.getLocations(JGitEnvironmentRepository.java:262) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.getLocations(MultipleJGitEnvironmentRepository.java:139) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.AbstractScmEnvironmentRepository.findOne(AbstractScmEnvironmentRepository.java:55) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.findOneFromCandidate(MultipleJGitEnvironmentRepository.java:188) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentRepository.findOne(MultipleJGitEnvironmentRepository.java:173) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.CompositeEnvironmentRepository.findOne(CompositeEnvironmentRepository.java:64) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentEncryptorEnvironmentRepository.findOne(EnvironmentEncryptorEnvironmentRepository.java:61) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentController.getEnvironment(EnvironmentController.java:132) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.EnvironmentController.defaultLabelIncludeOrigin(EnvironmentController.java:114) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
-	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) [spring-core-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:485) [spring-cloud-context-3.1.0.jar:3.1.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) [spring-aop-5.3.15.jar:5.3.15]
-	at org.springframework.cloud.config.server.environment.EnvironmentController$$EnhancerBySpringCGLIB$$889bf9fe.defaultLabelIncludeOrigin(<generated>) [spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_301]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_301]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_301]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_301]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.15.jar:5.3.15]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.15.jar:5.3.15]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.15.jar:5.3.15]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.15.jar:5.3.15]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
-	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_301]
-Caused by: org.eclipse.jgit.api.errors.RefNotFoundException: Ref main cannot be resolved
-	at org.eclipse.jgit.api.CheckoutCommand.call(CheckoutCommand.java:223) ~[org.eclipse.jgit-5.12.0.202106070339-r.jar:5.12.0.202106070339-r]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.checkout(JGitEnvironmentRepository.java:468) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	at org.springframework.cloud.config.server.environment.JGitEnvironmentRepository.refresh(JGitEnvironmentRepository.java:307) ~[spring-cloud-config-server-3.1.0.jar:3.1.0]
-	... 69 common frames omitted
-
-2022-01-29 09:06:17.959  INFO 7756 --- [http-nio-9999-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
-2022-01-29 09:06:17.991  WARN 7756 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
-2022-01-29 09:06:18.520  WARN 7756 --- [http-nio-9999-exec-1] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
-2022-01-29 09:06:19.373  INFO 7756 --- [http-nio-9999-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'
+2022-02-04 08:21:24.338  INFO 4456 --- [http-nio-9999-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : Will try to checkout master label instead.
+2022-02-04 08:21:24.347  WARN 4456 --- [http-nio-9999-exec-9] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/info/refs?service=git-upload-pack
+2022-02-04 08:21:24.887  WARN 4456 --- [http-nio-9999-exec-9] pClientConfigurableHttpConnectionFactory : No custom http config found for URL: https://github.com/KunigiriMohan/Book-Store-ConfigServer.git/git-upload-pack
+2022-02-04 08:21:25.905  INFO 4456 --- [http-nio-9999-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [E:\CFP_Project\Book_Store_Application\Book-Store-ConfigServer\book-store-service.properties]' via location 'file:/E:/CFP_Project/Book_Store_Application/Book-Store-ConfigServer/'

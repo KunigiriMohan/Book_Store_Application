@@ -4,7 +4,7 @@ import com.application.bookstore.model.Book;
 import com.application.bookstore.model.OrderDATA;
 import com.application.bookstore.model.OrderDATACart;
 import com.application.bookstore.repository.BookStoreBuyNowRepository;
-import com.application.bookstore.service.IBookStoreBuyNowService;
+import com.application.bookstore.service.BookStoreBuyNowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +23,7 @@ public class BookStoreBuyNowController {
      * Autowiring Service Interface for Dependency Injection
      */
     @Autowired
-    IBookStoreBuyNowService iBookStoreBuyNowService;
+    BookStoreBuyNowService bookStoreBuyNowService;
 
     @Autowired
     BookStoreBuyNowRepository bookStoreBuyNowRepository;
@@ -31,23 +31,27 @@ public class BookStoreBuyNowController {
     /**
      * API for buying Book from Home page using id
      * @param orderDATA
-     * @return
+     * @return : Book
      */
     @PostMapping("/buynow")
     public Book buyNow(@RequestBody OrderDATA orderDATA){
-        return iBookStoreBuyNowService.buyNow(orderDATA);
+        return bookStoreBuyNowService.buyNow(orderDATA);
     }
 
     /**
      * API for buying Books present in Cart
      * @param orderDATACart
-     * @return
+     * @return : List of Books present in Cart
      */
     @PostMapping("/buyallproductsincart")
     public List<Book> buyNowBooksinCart(@RequestBody OrderDATACart orderDATACart){
-        return iBookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
+        return bookStoreBuyNowService.buyNowBooksinCart(orderDATACart);
     }
 
+    /**
+     * API to get total price of all books present in Cart
+     * @return : Total Value of Books present in Cart
+     */
     @GetMapping("/carttotal")
     public Long totalCartValue(){return bookStoreBuyNowRepository.cartValue();}
 }
